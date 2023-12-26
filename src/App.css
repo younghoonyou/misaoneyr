@@ -1,3 +1,220 @@
-.App {
-  text-align: center;
+#root {
+  height: 100%;
 }
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.Typebox {
+  width: 100%;
+  height: 10%;
+  border-color: black;
+  background-color: #ffafc0;
+  color: white;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 200%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.Content-box {
+  width: 100%;
+  height: 530%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Country-Box {
+  height: 30%;
+  width: 100%;
+  background-color: #7ad9ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Country-map {
+  height: 90%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Country-flag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Hanalei Fill', cursive;
+}
+
+.Country-descrption {
+  font-size: 30px;
+}
+
+[data-scroll] {
+  opacity: 0;
+  will-change: transform, scale, opacity;
+  transform: translateY(6rem) scale(0.93);
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-scroll='in'] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* [data-scroll='out'] {
+  opacity: 0;
+  transform: translateY(0) scale(1);
+} */
+
+.marker {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+  /* background-color: red; Customize the marker color */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+
+  /* transition: transform 0.3s ease; */
+
+  /* will-change: transform, scale, opacity; */
+  /* transform: translateY(6rem) scale(0.93); */
+  /* transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1); */
+}
+
+.marker-content {
+  /* position: relative; */
+  position: absolute;
+  /* z-index: 1; */
+}
+
+.marker-info {
+  width: 120px;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.2s linear;
+  position: absolute !important;
+  z-index: 6 !important;
+  top: 100%;
+  left: 50%;
+  transform: translateY(10%) scale(1) translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.marker:hover .marker-info {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.marker-photo {
+  width: 100%;
+  height: auto;
+}
+
+pin-icon {
+  width: 20px; /* Adjust the width as needed */
+  height: 20px;
+  position: absolute;
+}
+
+.Map-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* flex-direction: column; */
+}
+
+.Scroll-Box {
+  margin-left: 3%;
+  width: 10%;
+  height: 100%;
+  background-color: white;
+  overflow: scroll;
+}
+
+.Location-List {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* border: black; */
+  border: '1px solid black';
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20%;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.Location-List:hover {
+  transform: scale(1.2);
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.Location-List:hover ~ .Google-map {
+  background-color: #7ad9ff;
+}
+
+.Letter {
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  /* height: 100%; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0.1, 0.4);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 1%; */
+}
+
+.Letter-Box {
+  width: 90%;
+  height: 80%;
+  text-align: left;
+}
+
+.Letter-Box h1 {
+  font-weight: bold;
+}
+
+.Letter-Box p {
+  font-size: 24px;
+  font-family: 'Noto Sans Japanese';
+}
+
+/* canvas {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  max-height: 100vh;
+  max-width: 100vw;
+  transform: translate(-50%, -50%);
+} */
