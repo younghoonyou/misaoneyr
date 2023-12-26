@@ -12,7 +12,7 @@ const CountryMap = (props) => {
         <img src={photo} alt={`For ${title}`} className='marker-photo' />
       </div>
       <img
-        src={'/images/chick.png'}
+        src={'images/chick.png'}
         alt='Pin'
         className='pin-icon'
         width={'20px'}
