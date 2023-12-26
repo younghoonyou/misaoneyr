@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/misaoneyr/static/css/main.8c2905d4.css",
+    "main.js": "/misaoneyr/static/js/main.fb126624.js",
+    "index.html": "/misaoneyr/index.html",
+    "main.8c2905d4.css.map": "/misaoneyr/static/css/main.8c2905d4.css.map",
+    "main.fb126624.js.map": "/misaoneyr/static/js/main.fb126624.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c2905d4.css",
+    "static/js/main.fb126624.js"
+  ]
+}
